@@ -3,7 +3,7 @@ import json
 
 # Format: South,West,North,East
 bbox = "36.99,-114.05,42.01,-109.04" 
-query = f'[out:json][timeout:25];node["man_made"="surveillance"]({bbox});out;'
+query = f'[out:json][timeout:90];node["man_made"="surveillance"]({bbox});out;'
 
 print("Fetching data from OpenStreetMap...")
 response = requests.get("https://overpass-api.de/api/interpreter", params={'data': query})
